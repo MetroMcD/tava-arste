@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="1019" viewBox="0 0 768 1019" role="img" aria-label="Doctor portrait placeholder">
+  <rect width="768" height="1019" fill="#f1ebe2"/>
+  <circle cx="384" cy="300" r="130" fill="#d6c4ad"/>
+  <rect x="220" y="450" width="330" height="410" rx="48" fill="#fff"/>
+  <text x="384" y="930" text-anchor="middle" font-family="Lato, Arial, sans-serif" font-size="34" fill="#8c7b6b">Tatjana Tokareva</text>
+</svg>
