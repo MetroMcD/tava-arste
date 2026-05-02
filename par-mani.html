@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Par mani – Tatjana Tokareva – Tava ārste</title>
+  <meta name="description" content="Tatjana Tokareva – ārste ginekoloģe. Izglītība, darba pieredze un valodu prasmes.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ HEADER / NAV ══ -->
+<header class="site-header">
+  <nav class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="https://tava-arste.lv/wp-content/uploads/2022/07/cropped-Logo-mit-Name-3-klein-250x71.png"
+           alt="Tava ārste" width="180" height="51">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">
+        <span data-lang="lv" class="lang-active">Sākums</span>
+        <span data-lang="ru">Главная</span>
+      </a></li>
+      <li><a href="par-mani.html" class="active">
+        <span data-lang="lv" class="lang-active">Par mani</span>
+        <span data-lang="ru">Обо мне</span>
+      </a></li>
+      <li><a href="pakalpojumi.html">
+        <span data-lang="lv" class="lang-active">Pakalpojumi</span>
+        <span data-lang="ru">Услуги</span>
+      </a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div class="nav-address">
+        Burtnieku iela 36a-57, Rīga, LV-1084
+      </div>
+      <div class="lang-switch">
+        <button id="btn-lv" class="active" onclick="setLang('lv')">LV</button>
+        <span class="lang-sep">|</span>
+        <button id="btn-ru" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ══ MAIN ══ -->
+<main>
+
+  <!-- LATVIAN -->
+  <section data-lang="lv" class="lang-active">
+    <div class="par-mani-grid">
+      <div class="par-mani-photo">
+        <img src="https://tava-arste.lv/wp-content/uploads/2022/11/TatjanaTokareva-768x1019.jpg"
+             alt="Tatjana Tokareva" width="280" loading="lazy">
+      </div>
+      <div class="par-mani-content">
+        <h1>Tatjana Tokareva</h1>
+        <p class="subtitle">Ginekologs</p>
+
+        <div class="info-section">
+          <h3>Izglītība</h3>
+          <p>Rīgas Medicīnas institūts, 1985. gads</p>
+        </div>
+
+        <div class="info-section">
+          <h3>Darba pieredze</h3>
+          <p>Ūnijas doktorāts</p>
+        </div>
+
+        <div class="info-section">
+          <h3>Valodu prasmes</h3>
+          <ul>
+            <li>Latviešu</li>
+            <li>Krievu</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h3>Specialitātes</h3>
+          <ul>
+            <li>Ginekoloģija</li>
+            <li>Dzemdniecība</li>
+            <li>Ultrasonogrāfija</li>
+          </ul>
+        </div>
+
+        <a href="index.html#pieraksts" class="btn">Pierakstīties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUSSIAN -->
+  <section data-lang="ru">
+    <div class="par-mani-grid">
+      <div class="par-mani-photo">
+        <img src="https://tava-arste.lv/wp-content/uploads/2022/11/TatjanaTokareva-768x1019.jpg"
+             alt="Татьяна Токарева" width="280" loading="lazy">
+      </div>
+      <div class="par-mani-content">
+        <h1>Татьяна Токарева</h1>
+        <p class="subtitle">Гинеколог</p>
+
+        <div class="info-section">
+          <h3>Образование</h3>
+          <p>Рижский медицинский институт, 1985 год</p>
+        </div>
+
+        <div class="info-section">
+          <h3>Место работы</h3>
+          <p>Ūnijas doktorāts</p>
+        </div>
+
+        <div class="info-section">
+          <h3>Языки</h3>
+          <ul>
+            <li>Латышский</li>
+            <li>Русский</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h3>Специализация</h3>
+          <ul>
+            <li>Гинекология</li>
+            <li>Акушерство</li>
+            <li>Ультразвуковая диагностика</li>
+          </ul>
+        </div>
+
+        <a href="index.html#pieraksts" class="btn">Записаться на приём</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <p>
+    <span data-lang-inline="lv" class="lang-active">Copyright © 2026 Tava ārste &nbsp;·&nbsp; Burtnieku iela 36a-57, Rīga &nbsp;·&nbsp; <a href="tel:+37129441705">2 944 170 5</a></span>
+    <span data-lang-inline="ru">Copyright © 2026 Tava ārste &nbsp;·&nbsp; ул. Буртниеку 36a-57, Рига &nbsp;·&nbsp; <a href="tel:+37129441705">2 944 170 5</a></span>
+  </p>
+</footer>
+
+<script>
+  const LANG_KEY = 'ta_lang';
+
+  function setLang(lang) {
+    localStorage.setItem(LANG_KEY, lang);
+    applyLang(lang);
+  }
+
+  function applyLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('lang-active', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('[data-lang-inline]').forEach(el => {
+      el.classList.toggle('lang-active', el.dataset.langInline === lang);
+    });
+    document.querySelectorAll('.nav-links [data-lang]').forEach(el => {
+      el.classList.toggle('lang-active', el.dataset.lang === lang);
+    });
+    document.documentElement.lang = lang === 'ru' ? 'ru' : 'lv';
+    document.getElementById('btn-lv').classList.toggle('active', lang === 'lv');
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+  }
+
+  const saved = localStorage.getItem(LANG_KEY) || 'lv';
+  applyLang(saved);
+</script>
+
+</body>
+</html>
