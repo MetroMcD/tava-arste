@@ -1,6 +1,7 @@
 {
   "name": "tava-arste",
   "compatibility_date": "2026-05-02",
+  "main": "src/index.js",
   "assets": {
     "directory": "./"
   }
