@@ -1,0 +1,5 @@
+# Cloudflare Pages – Redirects
+/par-mani       /par-mani.html   301
+/par-mani/      /par-mani.html   301
+/pakalpojumi    /pakalpojumi.html 301
+/pakalpojumi/   /pakalpojumi.html 301

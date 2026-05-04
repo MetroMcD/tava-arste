@@ -408,104 +408,8 @@ main {
   text-decoration: none;
 }
 
-/* ── HAMBURGER ── */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  z-index: 200;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--color-text);
-  border-radius: 2px;
-  transition: transform 0.25s, opacity 0.25s;
-  transform-origin: center;
-}
-
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* Mobile drawer */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  inset: var(--nav-h) 0 0 0;
-  background: var(--color-surface);
-  z-index: 99;
-  flex-direction: column;
-  padding: 32px 24px;
-  gap: 0;
-  border-top: 1px solid var(--color-border);
-  overflow-y: auto;
-}
-
-.mobile-nav.open { display: flex; }
-
-.mobile-nav a {
-  display: block;
-  padding: 18px 0;
-  font-size: 20px;
-  font-family: var(--font-serif);
-  color: var(--color-text);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-border);
-  transition: color 0.2s;
-}
-
-.mobile-nav a:hover,
-.mobile-nav a.active { color: var(--color-accent); }
-
-.mobile-nav .mobile-lang {
-  display: flex;
-  gap: 12px;
-  margin-top: 28px;
-  padding-top: 24px;
-}
-
-.mobile-nav .mobile-lang button {
-  background: none;
-  border: 1px solid var(--color-border);
-  padding: 10px 20px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  cursor: pointer;
-  border-radius: 2px;
-  font-family: var(--font-sans);
-  color: var(--color-muted);
-  transition: all 0.2s;
-}
-
-.mobile-nav .mobile-lang button.active {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
-}
-
-.mobile-address {
-  margin-top: 20px;
-  font-size: 13px;
-  color: var(--color-muted);
-  line-height: 1.6;
-}
-
 /* ── RESPONSIVE ── */
-@media (max-width: 720px) {
-  .hamburger { display: flex; }
-  .nav-links { display: none; }
-  .nav-address { display: none; }
-  .lang-switch { display: none; }
-
+@media (max-width: 680px) {
   .hero {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -517,10 +421,15 @@ main {
 
   .par-mani-photo {
     position: static;
-    max-width: 240px;
+    max-width: 280px;
   }
 
-  main { padding: 32px 16px 64px; }
+  .nav-address { display: none; }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
 }
 
 /* ── HIDDEN LANG CONTENT ── */

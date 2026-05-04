@@ -3,57 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ── SEO ── -->
-  <title>Tava ārste – Dr. Tatjana Tokareva – Ginekologs Rīgā</title>
-  <meta name="description" content="Tatjana Tokareva – ārste ginekoloģe Rīgā. Privātprakse Burtnieku ielā 36a-57. Ginekoloģija, dzemdniecība, ultrasonogrāfija. Pieraksts: 2 944 170 5.">
-  <meta name="keywords" content="ginekologs Rīgā, ārste ginekoloģe, privātprakse Rīga, ginekoloģija, dzemdniecība, ultrasonogrāfija, Татьяна Токарева гинеколог Рига">
-  <meta name="author" content="Tatjana Tokareva">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tava-arste.lv/">
-
-  <!-- ── Open Graph ── -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tava-arste.lv/">
-  <meta property="og:title" content="Tava ārste – Dr. Tatjana Tokareva – Ginekologs Rīgā">
-  <meta property="og:description" content="Privātā ginekoloģijas prakse Rīgā. Pieraksts pa tālruni 2 944 170 5.">
-  <meta property="og:image" content="https://tava-arste.lv/images/hero.jpg">
-  <meta property="og:locale" content="lv_LV">
-  <meta property="og:locale:alternate" content="ru_RU">
-
-  <!-- ── Alternate language hreflang ── -->
-  <link rel="alternate" hreflang="lv" href="https://tava-arste.lv/">
-  <link rel="alternate" hreflang="ru" href="https://tava-arste.lv/?lang=ru">
-  <link rel="alternate" hreflang="x-default" href="https://tava-arste.lv/">
-
-  <!-- ── Structured Data ── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Tatjana Tokareva",
-    "alternateName": "Татьяна Токарева",
-    "description": "Ārste ginekoloģe, dzemdību un ultrasonogrāfijas speciāliste",
-    "url": "https://tava-arste.lv",
-    "telephone": "+37129441705",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Burtnieku iela 36a-57",
-      "addressLocality": "Rīga",
-      "postalCode": "LV-1084",
-      "addressCountry": "LV"
-    },
-    "medicalSpecialty": "Obstetrics and Gynecology",
-    "openingHours": ["Mo 14:00-18:00","Tu 09:00-14:00","We 09:00-14:00","Th 14:00-18:00","Fr 13:00-15:00"],
-    "image": "https://tava-arste.lv/images/tatjana.jpg",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 56.9496,
-      "longitude": 24.1052
-    }
-  }
-  </script>
-
+  <title>Tava ārste – Dr. Tatjana Tokareva – ginekoloģijas privātprakse</title>
+  <meta name="description" content="Ginekoloģijas privātprakse Rīgā. Dr. Tatjana Tokareva – ārste ginekoloģe, dzemdību un ultrasonogrāfijas speciāliste.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -62,70 +13,47 @@
 <header class="site-header">
   <nav class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo.png?v=1" alt="Tava ārste" width="180" height="51">
+      <img src="https://tava-arste.lv/wp-content/uploads/2022/07/cropped-Logo-mit-Name-3-klein-250x71.png"
+           alt="Tava ārste" width="180" height="51">
     </a>
 
     <ul class="nav-links">
-      <li><a href="index.html" class="active">
+      <li><a href="index.html" class="active" data-page="home">
         <span data-lang="lv" class="lang-active">Sākums</span>
         <span data-lang="ru">Главная</span>
       </a></li>
-      <li><a href="par-mani.html">
+      <li><a href="par-mani.html" data-page="par-mani">
         <span data-lang="lv" class="lang-active">Par mani</span>
         <span data-lang="ru">Обо мне</span>
       </a></li>
-      <li><a href="pakalpojumi.html">
+      <li><a href="pakalpojumi.html" data-page="pakalpojumi">
         <span data-lang="lv" class="lang-active">Pakalpojumi</span>
         <span data-lang="ru">Услуги</span>
       </a></li>
     </ul>
 
     <div style="display:flex;align-items:center;gap:16px;">
-      <div class="nav-address">Burtnieku iela 36a-57, Rīga, LV-1084</div>
+      <div class="nav-address">
+        Burtnieku iela 36a-57, Rīga, LV-1084
+      </div>
       <div class="lang-switch">
         <button id="btn-lv" class="active" onclick="setLang('lv')">LV</button>
         <span class="lang-sep">|</span>
         <button id="btn-ru" onclick="setLang('ru')">RU</button>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Izvēlne" aria-expanded="false" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 </header>
 
-<!-- ══ MOBILE DRAWER ══ -->
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilā navigācija">
-  <a href="index.html" class="active">
-    <span data-lang="lv" class="lang-active">Sākums</span>
-    <span data-lang="ru">Главная</span>
-  </a>
-  <a href="par-mani.html">
-    <span data-lang="lv" class="lang-active">Par mani</span>
-    <span data-lang="ru">Обо мне</span>
-  </a>
-  <a href="pakalpojumi.html">
-    <span data-lang="lv" class="lang-active">Pakalpojumi</span>
-    <span data-lang="ru">Услуги</span>
-  </a>
-  <div class="mobile-lang">
-    <button id="mob-btn-lv" class="active" onclick="setLang('lv')">LV</button>
-    <button id="mob-btn-ru" onclick="setLang('ru')">RU</button>
-  </div>
-  <div class="mobile-address">
-    Burtnieku iela 36a-57, Rīga<br>
-    <a href="tel:+37129441705" style="color:var(--color-accent)">2 944 170 5</a>
-  </div>
-</nav>
-
 <!-- ══ MAIN ══ -->
 <main>
 
-  <!-- LATVIAN -->
+  <!-- LATVIAN CONTENT -->
   <section data-lang="lv" class="lang-active">
     <div class="hero">
       <div class="hero-image">
-        <img src="images/hero.png" alt="Tatjana Tokareva ārste ginekoloģe Rīgā" loading="eager">
+        <img src="https://tava-arste.lv/wp-content/uploads/elementor/thumbs/pexels-ben-mack-5326909-scaled-qpe5jyjqerbwwli1y22afyd1s79032va3vyq3tm8ww.jpg"
+             alt="Tatjana Tokareva ārste" loading="eager">
       </div>
       <div class="hero-content">
         <h1>Tatjana Tokareva</h1>
@@ -162,11 +90,12 @@
     </div>
   </section>
 
-  <!-- RUSSIAN -->
+  <!-- RUSSIAN CONTENT -->
   <section data-lang="ru">
     <div class="hero">
       <div class="hero-image">
-        <img src="images/hero.png" alt="Татьяна Токарева врач гинеколог Рига" loading="eager">
+        <img src="https://tava-arste.lv/wp-content/uploads/elementor/thumbs/pexels-ben-mack-5326909-scaled-qpe5jyjqerbwwli1y22afyd1s79032va3vyq3tm8ww.jpg"
+             alt="Татьяна Токарева врач" loading="eager">
       </div>
       <div class="hero-content">
         <h1>Татьяна Токарева</h1>
@@ -222,44 +151,27 @@
   }
 
   function applyLang(lang) {
+    // block elements
     document.querySelectorAll('[data-lang]').forEach(el => {
       el.classList.toggle('lang-active', el.dataset.lang === lang);
     });
+    // inline elements
     document.querySelectorAll('[data-lang-inline]').forEach(el => {
       el.classList.toggle('lang-active', el.dataset.langInline === lang);
     });
+    // nav spans inside links
+    document.querySelectorAll('.nav-links [data-lang]').forEach(el => {
+      el.classList.toggle('lang-active', el.dataset.lang === lang);
+    });
+    // html lang attribute
     document.documentElement.lang = lang === 'ru' ? 'ru' : 'lv';
-    ['btn-lv','mob-btn-lv'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.toggle('active', lang === 'lv');
-    });
-    ['btn-ru','mob-btn-ru'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.toggle('active', lang === 'ru');
-    });
+    // buttons
+    document.getElementById('btn-lv').classList.toggle('active', lang === 'lv');
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
   }
 
-  function toggleMenu() {
-    const burger = document.getElementById('hamburger');
-    const nav = document.getElementById('mobile-nav');
-    const open = nav.classList.toggle('open');
-    burger.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  // Close drawer on link click
-  document.querySelectorAll('.mobile-nav a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.getElementById('mobile-nav').classList.remove('open');
-      document.getElementById('hamburger').classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-
-  // Handle ?lang= URL param
-  const urlLang = new URLSearchParams(location.search).get('lang');
-  const saved = urlLang || localStorage.getItem(LANG_KEY) || 'lv';
+  // Init
+  const saved = localStorage.getItem(LANG_KEY) || 'lv';
   applyLang(saved);
 </script>
 

@@ -3,58 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ── SEO ── -->
-  <title>Pakalpojumi – Ginekoloģija Rīgā – Tava ārste</title>
-  <meta name="description" content="Ginekoloģijas pakalpojumi Rīgā: ultrasonogrāfija, grūtniecības uzraudzība, kontracepcija, spirāles ievietošana, hormonu konsultācijas, endometrioze, pēcvēža aprūpe.">
-  <meta name="keywords" content="ginekoloģija Rīgā, ultrasonogrāfija, grūtniecība, kontracepcija, spirāle, endometrioze, hormonu terapija, гинекология Рига, узи, контрацепция, эндометриоз">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tava-arste.lv/pakalpojumi.html">
-
-  <!-- ── Open Graph ── -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tava-arste.lv/pakalpojumi.html">
-  <meta property="og:title" content="Pakalpojumi – Ginekoloģija Rīgā – Tava ārste">
-  <meta property="og:description" content="Pilns ginekoloģijas pakalpojumu klāsts Rīgā. Tatjana Tokareva – 25+ gadu pieredze.">
-  <meta property="og:image" content="https://tava-arste.lv/images/tatjana.jpg">
-  <meta property="og:locale" content="lv_LV">
-  <meta property="og:locale:alternate" content="ru_RU">
-
-  <!-- ── hreflang ── -->
-  <link rel="alternate" hreflang="lv" href="https://tava-arste.lv/pakalpojumi.html">
-  <link rel="alternate" hreflang="ru" href="https://tava-arste.lv/pakalpojumi.html?lang=ru">
-  <link rel="alternate" hreflang="x-default" href="https://tava-arste.lv/pakalpojumi.html">
-
-  <!-- ── Structured Data ── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Tava ārste – Tatjana Tokareva",
-    "url": "https://tava-arste.lv",
-    "telephone": "+37129441705",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Burtnieku iela 36a-57",
-      "addressLocality": "Rīga",
-      "postalCode": "LV-1084",
-      "addressCountry": "LV"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Ginekoloģijas pakalpojumi",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Ginekoloģiskā ultrasonoskopija"}},
-        {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Grūtniecības uzraudzība"}},
-        {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Kontracepcijas konsultācija"}},
-        {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Spirāles ievietošana"}},
-        {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Hormonu konsultācijas"}},
-        {"@type": "Offer", "itemOffered": {"@type": "MedicalProcedure", "name": "Endometriozes ārstēšana"}}
-      ]
-    }
-  }
-  </script>
-
+  <title>Pakalpojumi – Tava ārste</title>
+  <meta name="description" content="Ginekoloģijas pakalpojumi: ultrasonoskopija, grūtniecība, kontracepcija, hormonu konsultācijas, endometrioze un vairāk.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -63,7 +13,8 @@
 <header class="site-header">
   <nav class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo.png" alt="Tava ārste" width="180" height="51">
+      <img src="https://tava-arste.lv/wp-content/uploads/2022/07/cropped-Logo-mit-Name-3-klein-250x71.png"
+           alt="Tava ārste" width="180" height="51">
     </a>
 
     <ul class="nav-links">
@@ -82,47 +33,22 @@
     </ul>
 
     <div style="display:flex;align-items:center;gap:16px;">
-      <div class="nav-address">Burtnieku iela 36a-57, Rīga, LV-1084</div>
+      <div class="nav-address">
+        Burtnieku iela 36a-57, Rīga, LV-1084
+      </div>
       <div class="lang-switch">
         <button id="btn-lv" class="active" onclick="setLang('lv')">LV</button>
         <span class="lang-sep">|</span>
         <button id="btn-ru" onclick="setLang('ru')">RU</button>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Izvēlne" aria-expanded="false" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 </header>
 
-<!-- ══ MOBILE DRAWER ══ -->
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilā navigācija">
-  <a href="index.html">
-    <span data-lang="lv" class="lang-active">Sākums</span>
-    <span data-lang="ru">Главная</span>
-  </a>
-  <a href="par-mani.html">
-    <span data-lang="lv" class="lang-active">Par mani</span>
-    <span data-lang="ru">Обо мне</span>
-  </a>
-  <a href="pakalpojumi.html" class="active">
-    <span data-lang="lv" class="lang-active">Pakalpojumi</span>
-    <span data-lang="ru">Услуги</span>
-  </a>
-  <div class="mobile-lang">
-    <button id="mob-btn-lv" class="active" onclick="setLang('lv')">LV</button>
-    <button id="mob-btn-ru" onclick="setLang('ru')">RU</button>
-  </div>
-  <div class="mobile-address">
-    Burtnieku iela 36a-57, Rīga<br>
-    <a href="tel:+37129441705" style="color:var(--color-accent)">2 944 170 5</a>
-  </div>
-</nav>
-
 <!-- ══ MAIN ══ -->
 <main>
 
-  <!-- SVG icon templates -->
+  <!-- SVG icon templates (reusable) -->
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-ultrasound" viewBox="0 0 24 24">
       <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
@@ -331,36 +257,15 @@
     document.querySelectorAll('[data-lang-inline]').forEach(el => {
       el.classList.toggle('lang-active', el.dataset.langInline === lang);
     });
+    document.querySelectorAll('.nav-links [data-lang]').forEach(el => {
+      el.classList.toggle('lang-active', el.dataset.lang === lang);
+    });
     document.documentElement.lang = lang === 'ru' ? 'ru' : 'lv';
-    ['btn-lv','mob-btn-lv'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.toggle('active', lang === 'lv');
-    });
-    ['btn-ru','mob-btn-ru'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.toggle('active', lang === 'ru');
-    });
+    document.getElementById('btn-lv').classList.toggle('active', lang === 'lv');
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
   }
 
-  function toggleMenu() {
-    const burger = document.getElementById('hamburger');
-    const nav = document.getElementById('mobile-nav');
-    const open = nav.classList.toggle('open');
-    burger.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  document.querySelectorAll('.mobile-nav a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.getElementById('mobile-nav').classList.remove('open');
-      document.getElementById('hamburger').classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-
-  const urlLang = new URLSearchParams(location.search).get('lang');
-  const saved = urlLang || localStorage.getItem(LANG_KEY) || 'lv';
+  const saved = localStorage.getItem(LANG_KEY) || 'lv';
   applyLang(saved);
 </script>
 

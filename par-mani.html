@@ -3,8 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Par mani – Tatjana Tokareva – Tava ārste</title>
-  <meta name="description" content="Tatjana Tokareva – ārste ginekoloģe. Izglītība, darba pieredze un valodu prasmes.">
+
+  <!-- ── SEO ── -->
+  <title>Par mani – Tatjana Tokareva – Ginekologs Rīgā</title>
+  <meta name="description" content="Tatjana Tokareva – ārste ginekoloģe Rīgā ar 25+ gadu pieredzi. Izglītība: Rīgas Medicīnas institūts. Valodas: latviešu, krievu. Prakse Burtnieku ielā 36a-57.">
+  <meta name="keywords" content="Tatjana Tokareva ginekologs, ārste Rīgā, ginekoloģe, Татьяна Токарева гинеколог, врач Рига, Burtnieku iela">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tava-arste.lv/par-mani.html">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://tava-arste.lv/par-mani.html">
+  <meta property="og:title" content="Par mani – Tatjana Tokareva – Ginekologs Rīgā">
+  <meta property="og:description" content="Ārste ginekoloģe ar vairāk kā 25 gadu pieredzi. Prakse Rīgā.">
+  <meta property="og:image" content="https://tava-arste.lv/images/tatjana.jpg">
+  <meta property="og:locale" content="lv_LV">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <!-- ── hreflang ── -->
+  <link rel="alternate" hreflang="lv" href="https://tava-arste.lv/par-mani.html">
+  <link rel="alternate" hreflang="ru" href="https://tava-arste.lv/par-mani.html?lang=ru">
+  <link rel="alternate" hreflang="x-default" href="https://tava-arste.lv/par-mani.html">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +33,7 @@
 <header class="site-header">
   <nav class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <img src="images/logo.svg"
-           alt="Tava ārste" width="180" height="51">
+      <img src="images/logo.png" alt="Tava ārste" width="180" height="51">
     </a>
 
     <ul class="nav-links">
@@ -33,17 +52,42 @@
     </ul>
 
     <div style="display:flex;align-items:center;gap:16px;">
-      <div class="nav-address">
-        Burtnieku iela 36a-57, Rīga, LV-1084
-      </div>
+      <div class="nav-address">Burtnieku iela 36a-57, Rīga, LV-1084</div>
       <div class="lang-switch">
         <button id="btn-lv" class="active" onclick="setLang('lv')">LV</button>
         <span class="lang-sep">|</span>
         <button id="btn-ru" onclick="setLang('ru')">RU</button>
       </div>
+      <button class="hamburger" id="hamburger" aria-label="Izvēlne" aria-expanded="false" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 </header>
+
+<!-- ══ MOBILE DRAWER ══ -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilā navigācija">
+  <a href="index.html">
+    <span data-lang="lv" class="lang-active">Sākums</span>
+    <span data-lang="ru">Главная</span>
+  </a>
+  <a href="par-mani.html" class="active">
+    <span data-lang="lv" class="lang-active">Par mani</span>
+    <span data-lang="ru">Обо мне</span>
+  </a>
+  <a href="pakalpojumi.html">
+    <span data-lang="lv" class="lang-active">Pakalpojumi</span>
+    <span data-lang="ru">Услуги</span>
+  </a>
+  <div class="mobile-lang">
+    <button id="mob-btn-lv" class="active" onclick="setLang('lv')">LV</button>
+    <button id="mob-btn-ru" onclick="setLang('ru')">RU</button>
+  </div>
+  <div class="mobile-address">
+    Burtnieku iela 36a-57, Rīga<br>
+    <a href="tel:+37129441705" style="color:var(--color-accent)">2 944 170 5</a>
+  </div>
+</nav>
 
 <!-- ══ MAIN ══ -->
 <main>
@@ -52,8 +96,7 @@
   <section data-lang="lv" class="lang-active">
     <div class="par-mani-grid">
       <div class="par-mani-photo">
-        <img src="images/doctor-photo.svg"
-             alt="Tatjana Tokareva" width="280" loading="lazy">
+        <img src="images/tatjana.png" alt="Tatjana Tokareva – ārste ginekoloģe Rīgā" width="280" loading="lazy">
       </div>
       <div class="par-mani-content">
         <h1>Tatjana Tokareva</h1>
@@ -86,7 +129,7 @@
           </ul>
         </div>
 
-        <a href="index.html#pieraksts" class="btn">Pierakstīties</a>
+        <a href="http://unidok.lv" target="_blank" rel="noopener" class="btn">Pierakstīties</a>
       </div>
     </div>
   </section>
@@ -95,8 +138,7 @@
   <section data-lang="ru">
     <div class="par-mani-grid">
       <div class="par-mani-photo">
-        <img src="images/doctor-photo.svg"
-             alt="Татьяна Токарева" width="280" loading="lazy">
+        <img src="images/tatjana.png" alt="Татьяна Токарева – врач гинеколог Рига" width="280" loading="lazy">
       </div>
       <div class="par-mani-content">
         <h1>Татьяна Токарева</h1>
@@ -129,7 +171,7 @@
           </ul>
         </div>
 
-        <a href="index.html#pieraksts" class="btn">Записаться на приём</a>
+        <a href="http://unidok.lv" target="_blank" rel="noopener" class="btn">Записаться на приём</a>
       </div>
     </div>
   </section>
@@ -159,15 +201,36 @@
     document.querySelectorAll('[data-lang-inline]').forEach(el => {
       el.classList.toggle('lang-active', el.dataset.langInline === lang);
     });
-    document.querySelectorAll('.nav-links [data-lang]').forEach(el => {
-      el.classList.toggle('lang-active', el.dataset.lang === lang);
-    });
     document.documentElement.lang = lang === 'ru' ? 'ru' : 'lv';
-    document.getElementById('btn-lv').classList.toggle('active', lang === 'lv');
-    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+    ['btn-lv','mob-btn-lv'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', lang === 'lv');
+    });
+    ['btn-ru','mob-btn-ru'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', lang === 'ru');
+    });
   }
 
-  const saved = localStorage.getItem(LANG_KEY) || 'lv';
+  function toggleMenu() {
+    const burger = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    const open = nav.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  document.querySelectorAll('.mobile-nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('mobile-nav').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  const saved = urlLang || localStorage.getItem(LANG_KEY) || 'lv';
   applyLang(saved);
 </script>
 
