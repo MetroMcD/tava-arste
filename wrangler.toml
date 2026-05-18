@@ -1,7 +1,8 @@
 name = "tava-arste"
+main = "worker.js"
 compatibility_date = "2026-05-02"
 
 [assets]
 directory = "./"
-html_handling = "auto-trailing-slash"
-not_found_handling = "404-page"
+binding = "ASSETS"
+not_found_handling = "none"
