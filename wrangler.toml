@@ -1,8 +1,5 @@
 name = "tava-arste"
-main = "worker.js"
 compatibility_date = "2026-05-02"
 
 [assets]
 directory = "./"
-binding = "ASSETS"
-not_found_handling = "none"
